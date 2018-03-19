@@ -1,0 +1,14 @@
+$default-title-font: "Dosis", "Arial", sans-serif;
+$default-font: "Roboto", "Arial", sans-serif;
+$button--dark: #222222;
+$placeholder: rgba(68, 68, 68, 0.3);
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1200px;
+
+// Customization Bootstrap vars
+$grid-gutter-width: 0;
+$grid-columns: 12;
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px);
+$gutter: $grid-gutter-width;

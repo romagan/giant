@@ -1,0 +1,229 @@
+.main-header {
+	min-height: 100vh;
+
+	background-image: url("../img/bg-header.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+@media (min-width: $desktop-width) {
+	.main-header {
+		background-image: 
+			url("../img/iphones.png"),
+			url("../img/bg-header.jpg");
+		background-repeat: no-repeat, no-repeat;
+		background-size: 50%, cover;
+		background-position: right center, 100%;
+	}
+}
+
+.main-nav {
+
+	.main-nav__logo-wrapper {
+		padding: 40px 0;
+	}
+
+	.main-nav__logo-link {
+		display: block;
+
+		font-family: $default-title-font;
+		font-size: 36px;
+		line-height: 24px;
+		color: #ffffff !important;
+		text-align: center;
+	}
+
+	.main-nav__toggle {
+		position: absolute;
+	}
+
+	.main-nav__list {
+		margin: 0;
+		padding: 0;
+
+		text-align: center;
+		list-style: none;
+	}
+
+	.main-nav__list-link {
+		font-size: 14px;
+		line-height: 24px;
+		color: #ffffff;
+	}
+
+	.main-nav__list-item {
+		padding-bottom: 15px;
+		padding-top: 15px;
+
+		border-top: 1px solid #ffffff;
+	}
+
+	.main-nav__list-link--download {
+		color: $button--dark;
+
+		&:hover {
+			color: #ffffff;
+			text-decoration: none;
+
+			background-color: $button--dark;
+		}
+
+		&:active,
+		&:focus {
+			opacity: 0.9;
+		}	
+	}
+}
+
+@media (min-width: $tablet-width) {
+	.main-nav {
+		margin-bottom: 80px;
+
+		.main-nav__list {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 20px;
+			margin-left: 36px;
+		}
+
+		.main-nav__logo-link {
+			text-align: left;
+			& img {
+				margin-top: -15px;
+			}
+		}
+
+		.main-nav__toggle {
+			display: none;
+		}
+
+		.main-nav__list-item {
+			margin-bottom: 0;
+
+			border: none;
+		}
+	}
+}
+
+@media (min-width: $desktop-width) {
+	.main-nav {
+		margin-bottom: 102px;
+	}
+}
+
+.main-title {
+	margin: 0;
+	margin-bottom: 15px;
+
+	font-family: $default-title-font;
+	font-size: 34px;
+	line-height: 48px;
+	font-weight: 600;
+	color: #ffffff;
+	text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+	.main-title {
+		margin-bottom: 20px;
+
+		text-align: left;
+	}
+}
+
+@media (min-width: $desktop-width) {
+	.main-title {
+		font-size: 54px;
+		line-height: 60px;
+	}
+}
+
+.main-description {
+	margin: 0;
+	margin-bottom: 13px;
+	padding-right: 10px;
+	padding-left: 10px;
+
+	font-size: 14px;
+	line-height: 24px;
+
+	font-weight: 300;
+	color: #ffffff;
+	text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+	.main-description {
+		padding: 0;
+
+		text-align: left;
+	}
+}
+
+.main-advantages-list {
+	margin: 0;
+	margin-bottom: 38px;
+	padding: 0 10px;
+
+	font-size: 14px;
+	line-height: 24px;
+	color: #ffffff;
+
+	list-style: none;
+
+	.fa {
+		margin-right: 20px;
+	}
+}
+
+@media (min-width: $tablet-width) {
+	.main-advantages-list {
+		padding: 0;
+
+		.fa {
+			margin-right: 20px;
+		}
+	}
+}
+
+.main-advantages-item {
+	margin-bottom: 10px;
+}
+
+.main-title-button-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+@media (min-width: $tablet-width) {
+
+	.main-title-button-wrapper {
+		justify-content: flex-start;
+	}
+}
+
+@media (min-width: $desktop-width) {
+
+	.main-title-button-wrapper {
+		margin-bottom: 218px;
+	}
+}
+
+.main-title-button {
+	padding: 5px 36px;
+
+	line-height: 30px;
+
+  box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+  	color: #ffffff;
+  	text-decoration: none;
+  }
+
+  &:active,
+  &:focus {
+  	opacity: 0.9;
+  }
+}
