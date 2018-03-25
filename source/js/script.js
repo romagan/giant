@@ -1,46 +1,45 @@
-/*Модальное окно*/
-var link = document.querySelector(".weekly__order");
-var modal = document.querySelector(".add-to-cart");
-var wrapper = document.querySelector(".modal-wrapper");
+  /*--Water Wheel Carousel--*/
+$(document).ready(function () {
+  var carousel = $("#carousel").waterwheelCarousel({
+    startingItem: 4,
+    flankingItems: 4,
+    separation: 200,
+    sizeMultiplier: 0.8,
+    separationMultiplier: 0.7,
+    speed: 250,
+    opacityMultiplier: 1
+  });
 
-link.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  modal.classList.add("add-to-cart--show");
-  wrapper.classList.add("modal-wrapper--show");
+  $('#prev').on('click', function (){
+    carousel.prev();
+    return false;
+  });
+  $('#next').on('click', function (){
+    carousel.next();
+    return false;
+  });
 });
 
-window.addEventListener("keydown", function(evt) {
-  if (evt.keyCode === 27) {
-    if (modal.classList.contains("add-to-cart--show")) {
-      modal.classList.remove("add-to-cart--show");
-      wrapper.classList.remove("modal-wrapper--show");
+  /*--Owl Carousel--*/
+$(document).ready(function () {
+  $(".reviews__carousel").owlCarousel({
+    navText: ["<i class='fa fa-long-arrow-left' aria-hidden='true'></i>", "<i class='fa fa-long-arrow-right' aria-hidden='true'></i>"],
+    margin: 25,
+    responsive: {
+      0: {
+        items: 1,
+        margin: 0,
+      },
+      768: {
+        items: 2,
+      },
+      1200: {
+        items: 3,
+        nav : true,
+        dots: false,
+        center: true,
+        startPosition: 1,
+      },
     }
-  }
+  })
 });
-
-wrapper.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  modal.classList.remove("add-to-cart--show");
-  wrapper.classList.remove("modal-wrapper--show");
-});
-
-/*Переключатель главного меню на мобильной версии*/
-var pageHeader = document.querySelector(".page-header");
-var toggle = document.querySelector(".main-nav__toggle");
-
-pageHeader.classList.remove("page-header--nojs");
-
-toggle.addEventListener("click", function() {
-  if (pageHeader.classList.contains("page-header--closed")) {
-    pageHeader.classList.remove("page-header--closed");
-    pageHeader.classList.add("page-header--opened");
-  } else {
-    pageHeader.classList.add("page-header--closed");
-    pageHeader.classList.remove("page-header--opened");
-  }
-});
-
-/*Фоновая карта при выключенном js*/
-var iframe = document.querySelector(".contacts__iframe");
-
-iframe.classList.remove("contacts__iframe--nojs;")

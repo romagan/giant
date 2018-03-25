@@ -1,10 +1,18 @@
 $default-title-font: "Dosis", "Arial", sans-serif;
 $default-font: "Roboto", "Arial", sans-serif;
 $button--dark: #222222;
-$placeholder: rgba(68, 68, 68, 0.3);
+$gray--dark: #333333;
+$gray--light: #777777;
+$icon--pink: #f31f79;
+$gradient: linear-gradient(to right, #fd712c 0%, #f31e7a 100%);
+$gradient-fallback: #f9504a;
+$bg--gray: #f7fafc;
+$gray--line: #eeeeee;
+$hover--line: #d9dcde;
 $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1200px;
+$fullhd-width: 1920px;
 
 // Customization Bootstrap vars
 $grid-gutter-width: 0;

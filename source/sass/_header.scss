@@ -1,23 +1,20 @@
 .main-header {
 	min-height: 100vh;
 
-	background-image: url("../img/bg-header.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+  background-image: $gradient;
+	background-color: $gradient-fallback;
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: $tablet-width) {
 	.main-header {
-		background-image: 
+		background-image:
 			url("../img/iphones.png"),
-			url("../img/bg-header.jpg");
-		background-repeat: no-repeat, no-repeat;
+			$gradient;
+		background-repeat: no-repeat;
 		background-size: 50%, cover;
 		background-position: right center, 100%;
 	}
 }
-
 .main-nav {
 
 	.main-nav__logo-wrapper {
@@ -29,9 +26,10 @@
 
 		font-family: $default-title-font;
 		font-size: 36px;
-		line-height: 24px;
 		color: #ffffff !important;
 		text-align: center;
+
+		cursor: default;
 	}
 
 	.main-nav__toggle {
@@ -47,8 +45,6 @@
 	}
 
 	.main-nav__list-link {
-		font-size: 14px;
-		line-height: 24px;
 		color: #ffffff;
 	}
 
@@ -57,6 +53,10 @@
 		padding-top: 15px;
 
 		border-top: 1px solid #ffffff;
+
+		&:last-child {
+			padding-bottom: 50px;
+		}
 	}
 
 	.main-nav__list-link--download {
@@ -72,7 +72,7 @@
 		&:active,
 		&:focus {
 			opacity: 0.9;
-		}	
+		}
 	}
 }
 
@@ -117,7 +117,7 @@
 	margin-bottom: 15px;
 
 	font-family: $default-title-font;
-	font-size: 34px;
+	font-size: 36px;
 	line-height: 48px;
 	font-weight: 600;
 	color: #ffffff;
@@ -141,12 +141,9 @@
 
 .main-description {
 	margin: 0;
-	margin-bottom: 13px;
+	margin-bottom: 30px;
 	padding-right: 10px;
 	padding-left: 10px;
-
-	font-size: 14px;
-	line-height: 24px;
 
 	font-weight: 300;
 	color: #ffffff;
@@ -166,14 +163,14 @@
 	margin-bottom: 38px;
 	padding: 0 10px;
 
-	font-size: 14px;
-	line-height: 24px;
 	color: #ffffff;
 
 	list-style: none;
 
 	.fa {
 		margin-right: 20px;
+
+		font-size: 16px;
 	}
 }
 
@@ -194,6 +191,7 @@
 .main-title-button-wrapper {
 	display: flex;
 	justify-content: center;
+	margin-bottom: 50px;
 }
 
 @media (min-width: $tablet-width) {
@@ -227,3 +225,5 @@
   	opacity: 0.9;
   }
 }
+
+
